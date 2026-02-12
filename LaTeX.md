@@ -1,106 +1,151 @@
-C++  important questions 
+## LaTeX
+___
+### Preamble
 
-### Write a code to print sum of even digits and product of odd digits of a number.
-
-```
-#include <iostream>
-using namespace std;
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    int even =0;
-    int odd =1;
-    while (num > 0) {
-        int digit = num % 10;
-        if (digit % 2 == 0) {
-            even += digit;
-        }
-        else {
-            odd *= digit;
-        }
-        num /= 10;
-    }
-    cout << "Sum of even digits:  " << even << endl; ;
-    cout << "Product of odd digits:  " << odd << endl;
-    return  0;
-}
-```
-###  To print factorial of a number .
-   
-```
-  #include <iostream>
-using namespace std;
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    int fac=1;
-    for(int i=1; i<=num; i++)
-        fac *= i;
-    cout << "Factorial of " << num << " is: " << fac << endl;
-    return 0;
-} 
-```
-### To reverse a number 
-```
-#include <iostream>
-using namespace std;
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    int rev=0;
-    while (num > 0) {
-        rev = rev * 10 + num % 10;
-        num /= 10;
-    }
-    cout << "Reversed number: " << rev << endl;
-    return 0;
-}
+```latex
+\documentclass[11pt]{article}
 ```
 
-### To check weather a number is palidrome or not 
+---
+
+### A LaTeX Document
+
+```latex
+\begin{document}
+Hello! This is my first \LaTeX\ document.
+\end{document}
+```
+---
+
+### Soft return
+```latex
+A rectangle has side lengths of $(x+1)$ and $(x+3)$
+
+the equation $A(x)=x^2+4x+3$
+```
+---
+### Hard return
+
+```tex
+A rectangle has side lengths of $(x+1)$ and $(x+3)$\\
+the equation $A(x)=x^2+4x+3$
+### Math mode in LaTeX
+```
+___
+
+### Math mode in latex
 
 ```
-#include <iostream>
-using namespace std;
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    int rev = 0;
-    while (num > 0) {
-        rev = rev * 10 + num % 10;
-        num /= 10;
-    }
-    if (rev == num) {
-        cout << "The number is a palindrome." << endl;
-    } else {
-        cout << "The number is not a palindrome." << endl;
-    }
-    return 0;
-}
+A rectangle has side lengths of $(x+1)$ and $(x+3)$
+the equation $A(x)=x^2+4x+3$
 ```
-### To check weather a number is prime or not 
+---
 
+### To put the equation in same line use `${}$`
+
+```tex
+The equation ${A(x)=x^2+4x+3}$ gives the area of the rectangle.
 ```
-#include <iostream>
-using namespace std;
-int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    int p = 0;
-    for (int i = 1; i <= num; i++) {
-        if (num % i == 0) {
-        p += 1;}
-    }
-    if (p > 2) {
-        cout << "The number is not prime." << endl;
-    } else {
-        cout << "The number is prime." << endl;
-    }
-    return 0;
-}
+---
+
+### For display math mode use `$$ $$`
+
+```tex
+$${A(x)=x^2+4x+3}$$
 ```
+
+--- 
+
+### Superscrits
+
+```tex
+Superscripts 
+$$2x^3$$
+$$2x^{34}$$
+$$2x^{3x+4}$$
+$$3x^{3x^4+5}$$
+```
+>Superscripts 
+>$$2x^3$$
+>$$2x^{34}$$
+>$$2x^{3x+4}$$
+>$$3x^{3x^4+5}$$
+>---
+
+### Subscripts
+```tex
+$$x_1$$
+$$x_{12}$$
+$$x_{1_2}$$
+$$x_{1_{2_3}}$$
+$$x_{1_{2_{3_4}}}$$
+$$a_0,a_1,a_2,\ldots,a_{100}$$
+```
+>Subscripts
+>$$x_1$$
+>$$x_{12}$$
+>$$x_{1_2}$$
+>$$x_{1_{2_3}}$$
+>$$x_{1_{2_{3_4}}}$$
+>$$a_0,a_1,a_2,\ldots,a_{100}$$
+>
+>---
+
+### Greek Letters
+
+```tex
+$$pi$$
+$$PI$$
+$$alpha$$
+$$A=\pi r^2$$
+```
+>Greek Letters
+>$$pi$$
+>$$PI$$
+>$$alpha$$
+>$$A=\pi r^2$$
+>
+>---
+### Trig functions
+
+```tex
+$$y=\sin x$$
+$$y=\cos x$$
+$$y=\csc \theta$$
+$$y=\sin^{-1} x$$
+$$y=\arcsin x$$
+```
+>Trig functions
+>$$y=\sin x$$
+>$$y=\cos x$$
+>$$y=\csc \theta$$
+>$$y=\sin^{-1} x$$
+>$$y=\arcsin x$$
+>
+>---
+
+### Log functions
+``` tex
+$$y=\log x$$
+$$y=\log_5 x$$
+$$y=\ln x$$
+```
+
+>Log functions
+>$$y=\log x$$
+>$$y=\log_5 x$$
+>$$y=\ln x$$
+>---
+### Roots 
+```tex
+$$\sqrt[3]{2}$$
+$$\sqrt{s^2+y^2}$$
+$$\sqrt{  1+\sqrt{x}  }$$
+```
+
+>Roots
+>$$\sqrt[3]{2}$$
+>$$\sqrt{s^2+y^2}$$
+>$$\sqrt{  1+\sqrt{x}  }$$
+>
+>---
