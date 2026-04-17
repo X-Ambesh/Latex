@@ -1,0 +1,48 @@
+\documentclass[11pt,a5paper]{article}
+
+\usepackage{setspace}
+\usepackage{blindtext}
+
+\onehalfspacing
+
+\title{LaTeX Practical Exam}
+\author{Your Name \\ Course Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Formatting Examples}
+
+\begin{itemize}
+    \item \textbf{This text is in bold.}
+    \item \textit{This text is in italic.}
+    \item \textsc{This text is in small caps.}
+    \item {\fontsize{10}{12}\selectfont This text is in fontsize 1.}
+    \item {\fontsize{12}{14}\selectfont This text is in fontsize 2.}
+    \item {\fontsize{14}{16}\selectfont This text is in fontsize 3.}
+\end{itemize}
+
+\section*{Side-by-Side Blocks}
+
+\noindent
+\begin{minipage}{0.45\textwidth}
+\blindtext
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\blindtext
+\end{minipage}
+
+\section*{Mathematical Content}
+
+Let $f(x) = \sin x$ be a continuous function on the real line $\mathbb{R}$.  
+The derivative of $f(x)$ is given by:
+\begin{equation}
+\frac{d}{dx}(f(x)) = \cos x
+\end{equation}
+
+From equation (1), we observe that the rate of change of $f(x)$ depends on the cosine function.
+
+\end{document}
